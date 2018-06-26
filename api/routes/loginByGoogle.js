@@ -10,7 +10,7 @@ let userGoogle = () => {
     passport.use(new GoogleStrategy({
             clientID: '224568268045-jo32jfmhqhm6pqgn9epm7agoq7lp9r8a',
             clientSecret: '7wHc4A2w2rVz2yCPKK5bhsZT',
-            callbackURL: "http://localhost:3000/users/login/google/callback"
+            callbackURL: "http://localhost:5000/users/login/google/callback"
         },
         (accessToken, refreshToken, profile, done) => {
             console.log('check profile', profile);
