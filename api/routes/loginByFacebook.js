@@ -8,7 +8,7 @@ const User = require('../models/users');
       passport.use(new FacebookStrategy({
               clientID: 1993107304353343,
               clientSecret: '4ca499c5cac0921d44b08b288685c118',
-              callbackURL: "http://localhost:3000/users/login/facebook/callback"
+              callbackURL: "http://secret-falls-75483.herokuapp.com:5000/users/login/facebook/callback"
           },
           (req, accessToken, refreshToken, profile, done) => {
               console.log('check profile', profile);
