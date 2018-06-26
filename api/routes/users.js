@@ -86,7 +86,7 @@ router.get('/login/facebook/callback', passport.authenticate('facebook'), (req,r
 
 router.get('/login/google', passport.authenticate('google',{scope:['profile']}));
 
-router.get('/login/google/callback', (req,res) => {res.redirect('http://localhost:3000/products')} );
+router.get('/login/google/callback', (req,res) => {res.redirect('http://localhost:5000/products')} );
 
 router.get('/', function (req, res, next) {
     User.find()
