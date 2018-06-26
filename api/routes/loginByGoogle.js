@@ -5,12 +5,13 @@ const GoogleStrategy = require('passport-google-oauth20').Strategy;
 // const User = require('../models/users');
 const Social = require('../models/socialUser');
 const jwt = require('jsonwebtoken');
+const PORT = require('../../config/db');
 
 let userGoogle = () => {
     passport.use(new GoogleStrategy({
             clientID: '224568268045-jo32jfmhqhm6pqgn9epm7agoq7lp9r8a',
             clientSecret: '7wHc4A2w2rVz2yCPKK5bhsZT',
-            callbackURL: "https://secret-falls-75483.herokuapp.com/:5000/users/login/google/callback"
+            callbackURL: `https://secret-falls-75483.herokuapp.com:${PORT}/users/login/google/callback`
         },
         (accessToken, refreshToken, profile, done) => {
             console.log('check profile', profile);
