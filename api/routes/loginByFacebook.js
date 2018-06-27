@@ -5,11 +5,13 @@ const FacebookStrategy = require('passport-facebook').Strategy;
 // const User = require('../models/users');
 const Social = require('../models/socialUser');
 
+// https://secret-falls-75483.herokuapp.com/people/auth/facebook/callback
+
   let userFacebook = () => {
       passport.use(new FacebookStrategy({
               clientID: 1993107304353343,
               clientSecret: '4ca499c5cac0921d44b08b288685c118',
-              callbackURL: "https://secret-falls-75483.herokuapp.com/users/login/facebook/callback"
+              callbackURL: "https://mighty-escarpment-23018.herokuapp.com/users/login/facebook/callback"
           },
           (req, accessToken, refreshToken, profile, done) => {
               console.log('check profile', profile);
