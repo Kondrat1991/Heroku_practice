@@ -82,7 +82,7 @@ router.post('/login', function (req, res, next) {
 
 router.get('/login/facebook', passport.authenticate('facebook') );
 
-router.get('/login/facebook/callback', passport.authenticate('facebook'), (req,res) => {res.send("You are welcome at Facebook!!!")} );
+router.get('/login/facebook/callback', (req,res) => {res.send("You are welcome at Facebook!!!")} );
 
 router.get('/login/google', passport.authenticate('google',{scope:['profile']}));
 
