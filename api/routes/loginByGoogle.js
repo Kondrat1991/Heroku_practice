@@ -9,8 +9,8 @@ const PORT = require('../../config/db');
 
 let userGoogle = () => {
     passport.use(new GoogleStrategy({
-            clientID: '224568268045-jo32jfmhqhm6pqgn9epm7agoq7lp9r8a',
-            clientSecret: '7wHc4A2w2rVz2yCPKK5bhsZT',
+            clientID: '224568268045-o59ugv2vjbov604ov6t27eljdba3pck7',
+            clientSecret: 'LoFramM8YX5aDt9AShsh6bUj',
             callbackURL: `https://secret-falls-75483.herokuapp.com/users/login/google/callback`
         },
         (accessToken, refreshToken, profile, done) => {

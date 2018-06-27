@@ -86,7 +86,7 @@ router.get('/login/facebook/callback', passport.authenticate('facebook'), (req,r
 
 router.get('/login/google', passport.authenticate('google',{scope:['profile']}));
 
-router.get('/login/google/callback', (req,res) => {res.redirect('https://secret-falls-75483.herokuapp.com/products')} );
+router.get('/login/google/callback', (req,res) => {res.redirect('../../../products/')} );
 
 router.get('/', function (req, res, next) {
     User.find()
