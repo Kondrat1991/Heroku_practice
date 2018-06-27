@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 const express = require('express');
 const passport = require('passport');
-const FacebookStrategy = require('passport-google-oauth20').Strategy;
+const FacebookStrategy = require('passport-facebook').Strategy;
 // const User = require('../models/users');
 const Social = require('../models/socialUser');
 
